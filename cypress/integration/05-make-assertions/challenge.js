@@ -25,7 +25,7 @@ it('should create 4 elements', () => {
 
 /*
   👦 challenge #2: test that toggle on todo item is checked, 
-  but use different method than in video. check documentation: 
+  but use different method than in demo. check documentation: 
   https://docs.cypress.io/guides/references/assertions.html#State
   ⚠️ start this test with 1 unchecked item
 */

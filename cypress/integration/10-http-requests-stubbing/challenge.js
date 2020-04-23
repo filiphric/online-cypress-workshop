@@ -33,7 +33,7 @@ it('has n todo items (loaded from fixture)', () => {
 });
 
 /* 
-  👩 challenge #3: recreate the scenario from video and write a test
+  👩 challenge #3: recreate the scenario from demo and write a test
   that will check error message when server returns error with status
   code 500
 */

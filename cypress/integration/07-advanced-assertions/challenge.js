@@ -46,7 +46,7 @@ it('Checks a texts of first and last todo items', () => {
 });
 
 /* 
-   🤓 challenge #4: examine the example from video. try to look more 
+   🤓 challenge #4: examine the example from demo. try to look more 
    into why the test is failing and what can we do to make it pass   
    ⚠️ make sure you have a todo item with the text "wash dishes" but 
    it is not in the first position

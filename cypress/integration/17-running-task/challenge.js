@@ -1,5 +1,5 @@
 /* 
-  🚀 challenge #1: examine the video and try to set up task yourself
+  🚀 challenge #1: examine the demo and try to set up task yourself
   don’t worry, if you just copy/paste stuff, you are learning this way
   too! if you feel like experimenting, try to change some details 
   about the task, or write your own

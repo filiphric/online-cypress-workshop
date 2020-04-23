@@ -17,7 +17,7 @@ beforeEach( () => {
 });
 
 /* 
-  👶 challenge #1: log in and check cookie (as shown in video)
+  👶 challenge #1: log in and check cookie (as shown in demo)
 */
 it('saves auth cookie after login', () => {
   

@@ -14,7 +14,7 @@ beforeEach( () => {
 });
 
 /* 
-  👶 challenge #1: continue with the test from video. make 
+  👶 challenge #1: continue with the test from demo. make 
   the ".destroy" element disappear
 */
 it('have delete icon', () => {
