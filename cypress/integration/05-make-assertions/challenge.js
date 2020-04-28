@@ -16,7 +16,7 @@ beforeEach( () => {
 });
 
 /*
-  👶 challenge #1: check that there are 4 elements on page
+  👶 challenge #1: check that there are 4 todo items on page
   ⚠️ start this test with 0 items in list
 */
 it('should create 4 elements', () => {
