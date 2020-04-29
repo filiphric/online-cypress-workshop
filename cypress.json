@@ -4,5 +4,6 @@
   "viewportHeight": 800,
   "ignoreTestFiles": "**/*.md",
   "testFiles": "**/99-testing-application/*.js",
-  "$schema": "https://on.cypress.io/cypress.schema.json"
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "projectId": "wu4hpc"
 }
