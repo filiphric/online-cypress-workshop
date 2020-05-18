@@ -14,7 +14,9 @@
 it('creates a todo item', () => {
 
   cy
-    .visit('localhost:3000');
+    .visit('localhost:3000')
+    .get('#add-todo')
+    .type('03-interact-with-elements{enter}');
   
 });
 
@@ -24,7 +26,8 @@ it('creates a todo item', () => {
 it('completes a todo item (using .click() command)', () => {
 
   cy
-    .visit('localhost:3000');
+    .visit('localhost:3000')
+    .get('.toggle').click();
   
 });
 
@@ -34,7 +37,8 @@ it('completes a todo item (using .click() command)', () => {
 it('completes a todo item (using .check() command)', () => {
 
   cy
-    .visit('localhost:3000');
+    .visit('localhost:3000')
+    .get('.toggle').check();
   
 });
 
@@ -45,7 +49,8 @@ it('completes a todo item (using .check() command)', () => {
 it('marks a todo item as not completed (using .uncheck() command)', () => {
 
   cy
-    .visit('localhost:3000');
+    .visit('localhost:3000')
+    .get('.toggle').uncheck()
   
 });
 
@@ -56,6 +61,9 @@ it('marks a todo item as not completed (using .uncheck() command)', () => {
 it('creates a todo item with the text "buy milk"', () => {
 
   cy
-    .visit('localhost:3000');
+    .visit('localhost:3000')
+    .get('#add-todo')
+    .type('milk{leftarrow}buy{enter}')
+  ;
   
 });
