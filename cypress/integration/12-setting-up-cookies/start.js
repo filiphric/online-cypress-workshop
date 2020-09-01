@@ -5,7 +5,7 @@ beforeEach( () => {
   cy
     .request('POST', 'localhost:3000/accounts/seed', [
       {
-        'email': 'admin@udemy-cypress-course.com',
+        'email': 'admin@cypress-workshop.com',
         'password': 'admin'
       }
     ]);
@@ -19,7 +19,7 @@ it.only('Logs in a user', () => {
 
   cy
     .get('[type=\'email\']')
-    .type('admin@udemy-cypress-course.com');
+    .type('admin@cypress-workshop.com');
 
   cy
     .get('[type=\'password\']')
@@ -33,7 +33,7 @@ it.only('Logs in a user', () => {
     .get('#loginMessage')
     .should('be.visible')
     .should('contain.text', 'User is logged in');
-  
+
 });
 
 it('is logged in', () => {
@@ -45,5 +45,5 @@ it('is logged in', () => {
     .get('#loginMessage')
     .should('be.visible')
     .should('contain.text', 'User is logged in');
-  
+
 });

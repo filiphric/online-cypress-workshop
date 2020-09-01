@@ -1,7 +1,7 @@
 {
   "name": "online-cypress-workshop",
   "version": "1.0.0",
-  "description": "Cypress workshop for udemy course",
+  "description": "Online Cypress workshop",
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
@@ -16,7 +16,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-chai-friendly": "^0.5.0",
     "eslint-plugin-cypress": "^2.7.0",
-    "http-server": "^0.12.1",
+    "http-server": "^0.12.3",
     "json-server": "0.15.1",
     "json-server-reset": "1.2.0",
     "node-gyp": "^6.0.1"

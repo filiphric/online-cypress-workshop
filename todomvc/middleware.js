@@ -1,7 +1,7 @@
 const sendmail = require('sendmail')();
- 
+
 module.exports = (req, res, next) => {
-  
+
   const db = req.app.db;
 
   if (req.method === 'GET' && req.path === '/login') {
@@ -35,7 +35,7 @@ module.exports = (req, res, next) => {
       if (req.headers.sendwelcomeemail === 'true') {
 
         sendmail({
-          from: 'todomvc@udemy-cypress-course.com',
+          from: 'todomvc@cypress-workshop.com',
           to: req.body.email,
           subject: 'Welcome to TodoMVC app',
           html: 'Your account was successfully created!\nIn the meantime, subscribe to my <a href="https://www.youtube.com/channel/UCDOCAVIhSh5VpJMEfdak1OA">YouTube channel for Cypress tips!</a>',
@@ -65,14 +65,14 @@ module.exports = (req, res, next) => {
   }
 
   if (req.method === 'POST' && req.path === '/todos/seed') {
-    
+
     db.set('todos', req.body).write();
 
     return res.sendStatus(201);
   }
 
   if (req.method === 'POST' && req.path === '/accounts/seed') {
-    
+
     db.set('accounts', req.body).write();
 
     return res.sendStatus(201);
@@ -107,7 +107,7 @@ module.exports = (req, res, next) => {
     }
 
   }
-  
+
   next();
-    
+
 };
