@@ -22,5 +22,5 @@ it('should pass', () => {
     .get('.todo')
     .should('have.length', 1)
     .should('contain.text', 'buy milk');
-  
+
 });

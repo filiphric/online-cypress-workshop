@@ -11,6 +11,7 @@
     "start": "cd todomvc && npm start"
   },
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^1.4.0",
     "@testing-library/cypress": "^5.0.2",
     "cypress": "^4.4.0",
     "eslint": "^6.7.2",

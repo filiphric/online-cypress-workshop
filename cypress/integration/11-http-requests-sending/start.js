@@ -1,12 +1,25 @@
+/// <reference types="cypress" />
 
-it.only('creates a todo item via api', () => {
+it('creates a todo item via api', () => {
+
+  cy
+    .request('POST', 'localhost:3000/todos', {
+      title: 'new todo',
+      completed: false
+    })
+
+  cy
+    .visit('localhost:3000')
 
 });
-    
-describe('resetting app state before each test', () => {
+
+describe.only('resetting app state before each test', () => {
 
   beforeEach( () => {
-    
+
+    cy
+      .request('DELETE', 'localhost:3000/todos')
+
     cy
       .visit('localhost:3000');
 
@@ -21,7 +34,7 @@ describe('resetting app state before each test', () => {
     cy
       .get('.todo')
       .should('have.length', 1);
-    
+
   });
 
   it('completes a todo item', () => {
@@ -33,7 +46,7 @@ describe('resetting app state before each test', () => {
     cy
       .get('.toggle')
       .click();
-    
+
   });
-  
+
 });

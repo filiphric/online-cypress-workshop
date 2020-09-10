@@ -8,7 +8,7 @@ declare namespace Cypress {
      */
     addTodo(todo: string): Chainable<any>
 
-    /* 
+    /*
       challenge hint: copy lines 4 - 9 and rewrite according
       the command you want to add
     */

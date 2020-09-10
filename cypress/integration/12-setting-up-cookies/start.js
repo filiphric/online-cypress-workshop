@@ -1,5 +1,9 @@
 /// <reference types="cypress" />
 
+Cypress.Cookies.defaults({
+  whitelist: 'auth'
+})
+
 beforeEach( () => {
 
   cy
@@ -12,7 +16,7 @@ beforeEach( () => {
 
 });
 
-it.only('Logs in a user', () => {
+it('Logs in a user', () => {
 
   cy
     .visit('localhost:3000/login');
@@ -33,6 +37,15 @@ it.only('Logs in a user', () => {
     .get('#loginMessage')
     .should('be.visible')
     .should('contain.text', 'User is logged in');
+
+  cy
+    .url()
+    .should('eq', 'http://localhost:3000/')
+
+  cy
+    .getCookie('auth')
+    .its('value')
+    .should('eq', 'true')
 
 });
 

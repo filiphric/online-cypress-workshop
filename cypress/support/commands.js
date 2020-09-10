@@ -1,7 +1,7 @@
-Cypress.Commands.add('addTodo', title => {
+Cypress.Commands.add('addTodo', (input) => {
 
   cy
     .get('.new-todo')
-    .type(title + '{enter}');
+    .type( input + '{enter}');
 
-});
+})

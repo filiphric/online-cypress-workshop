@@ -7,25 +7,31 @@ beforeEach( () => {
 
 });
 
-it.only('Should have todo item with text "create a list of todos"', () => {
+it('Should have todo item with text "create a list of todos"', () => {
 
   cy
     .get('.todo')
-    .should('be.visible');
-  
+    .contains('todos')
+
+  cy
+    .contains('todos')
+
 });
 
 it('Should have todo item with text "buy milk"', () => {
 
   cy
-    .get('.todo-list');
-    
+    .get('.todo-list')
+    .find('li')
+    .eq(1)
+    .should('contain.text', 'buy milk')
+
 });
 
-it('Should have one todo item', () => {
+it.only('Should have one todo item', () => {
 
   cy
-    .get('.todo');
-  // .should('have.length', 1);
-  
+    .get('.todo', {timeout: 60000})
+    .should('have.length', 1);
+
 });

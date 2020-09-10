@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 beforeEach(() => {
-  
+
   cy
     .request('POST', 'localhost:3000/todos/seed', [
       {
@@ -32,5 +32,9 @@ it('drags item to second position', () => {
     .get('.todo')
     .eq(1)
     .as('second');
-  
+
+  cy
+    .get('@first')
+    .drag('@second')
+
 });
